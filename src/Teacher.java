@@ -2,11 +2,13 @@ public class Teacher {
     private String name;
     private int id;
     private int salary;
+    private int salaryEarned;
 
     public Teacher(String name, int id, int salary) {
         this.name = name;
         this.id = id;
         this.salary = salary;
+        this.salaryEarned = 0;
     }
 
     /**
@@ -29,5 +31,14 @@ public class Teacher {
         this.salary = salary;
     }
 
+    /**
+     * adds salary
+     * removes from total money earned
+     * @param newSalary
+     */
+    public void receiveSalary(int newSalary) {
+        this.salaryEarned += newSalary;
+        School.updateTotalMoneySpent(newSalary);
+    }
 
 }

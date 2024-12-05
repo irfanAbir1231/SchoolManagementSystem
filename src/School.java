@@ -9,8 +9,8 @@ public class School {
      */
     private List<Teacher> teachers;
     private List<Student> students;
-    private int totalMoneyEarned;
-    private int totalMoneySpent;
+    private static int totalMoneyEarned;
+    private static int totalMoneySpent;
 
     public School(List<Teacher> teacher, List<Student> students) {
         this.teachers = teacher;
@@ -57,10 +57,10 @@ public class School {
 
     /**
      * adds the total money by the school
-     * @param totalMoneyEarned
+     * @param MoneyEarned
      */
-    public void updateTotalMoneyEarned(int totalMoneyEarned) {
-        this.totalMoneyEarned += totalMoneyEarned;
+    public static void updateTotalMoneyEarned(int MoneyEarned) {
+        totalMoneyEarned += MoneyEarned;
     }
 
     /**
@@ -76,7 +76,7 @@ public class School {
      * is the salary given by the school to its teacher
      * @param MoneySpent
      */
-    public void updateTotalMoneySpent(int MoneySpent) {
-        this.totalMoneyEarned -= MoneySpent;
+    public static void updateTotalMoneySpent(int MoneySpent) {
+        totalMoneyEarned -= MoneySpent;
     }
 }

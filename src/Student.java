@@ -28,8 +28,9 @@ public class Student {
      * the school is going to receive the funds.
      * @param feesPaid is the fees that the student pays
      */
-    public void updateFeesPaid(int feesPaid) {
+    public void payFees(int feesPaid) {
         this.feesPaid += feesPaid;
+        School.updateTotalMoneyEarned(feesPaid);
     }
 
     public int getId() {
@@ -51,6 +52,11 @@ public class Student {
     public int getFeesTotal() {
         return feesTotal;
     }
+
+    public int getRemainingFees(){
+        return feesPaid - feesTotal;
+    }
+
 
 
 
