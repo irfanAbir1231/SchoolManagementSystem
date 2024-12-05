@@ -27,6 +27,9 @@ public class Main {
         irfan.receiveSalary(irfan.getSalary());
         System.out.println("ipsc paid salary to " + irfan.getName() + " and now ipsc have " + ipsc.getTotalMoneyEarned());
 
+        System.out.println(abir);
+        System.out.println(jay);
+
 
     }
 }
